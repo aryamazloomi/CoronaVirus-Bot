@@ -34,12 +34,7 @@ telegram.on("text", (message) => {
         }
     }
 
-//Special Message :)
-    if(mText == "01001001 00100000 01101100 01101111 01110110 01100101 00100000 01011001 01101111 01110101")
-    {
-        telegram.sendAudio(mId ,"CQACAgQAAxkBAAM5XofQhcgfcxSenexda-iwGsssEo0AAnAAAywDoFHr0xxpxh8uYxgE");
-        telegram.sendMessage(mId, "Te amo My dear love... Love u 2 d MOON & back Narjes Jun");
-        async  }
+
 //Start function
     else if(mText =="/start" || mText.toLowerCase() == "start"){ 
         telegram.sendMessage(mId, "Hello my friend! you can use '/stats Country name' or simply type stats to see the country list and World stats!!\ne.g: /stats Iran" );  
@@ -83,11 +78,6 @@ telegram.on("text", (message) => {
     }
 });
 
-//To get file_id
-telegram.on("audio", (message) => {
-    telegram.sendMessage(message.chat.id, message.audio.file_id);
-    telegram.sendPhoto(message.chat.id , "https://www.eurofresh-distribution.com/sites/default/files/field/image/kiwi%20flck%20ed%20jeanb.jpg");
-  });
 
 //To show errors on Consol
 telegram.on("polling_error", (err) => console.log(err));
